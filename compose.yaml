@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devops
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - PORT=3000
+  mongo:
+    container_name: database
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: edwin
+      MONGO_INITDB_ROOT_PASSWORD: password
