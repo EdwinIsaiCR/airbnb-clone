@@ -2,6 +2,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/Layout";
 import { SessionProvider } from "next-auth/react";
+import '../styles/style.css'
 /* import { Provider } from "react-redux";
 import { wrapper } from "../redux/store"; */
 /* import { PaypalScriptProvider } from "@paypal/react-paypal-js"; */

@@ -1,6 +1,7 @@
 import Casas from "../components/Casas"
 import { useState, useEffect } from 'react'
 
+
 export default function Home() {
   const [casas, setCasas] = useState([])
   const [loading, setLoading] = useState(false)
